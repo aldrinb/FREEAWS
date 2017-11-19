@@ -1,0 +1,13 @@
+{
+    "AWSTemplateFormatVersion" : "2010-09-09",
+    "resources" : {
+        "VPC" : {
+      "Type" : "AWS::EC2::VPC",
+      "Properties" : {
+        "CidrBlock" : "10.20.0.0/16",
+        "EnableDnsSupport : "true",
+        "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} } ]
+      }
+    }
+
+}
